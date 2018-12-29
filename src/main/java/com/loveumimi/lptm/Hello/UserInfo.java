@@ -3,20 +3,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 @Entity
 public class UserInfo {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
-    private String nickName;
-    private String userId;
+    private String nickname;
+    private String userid;
     private String avatar;
     public String getNickName(){
-        return nickName;
+        return nickname;
     }
-    public void setNickName(String nickName){
-        this.nickName = nickName;
+    public void setNickName(String nickname){
+        this.nickname = nickname;
     }
     public String getAvatar(){
         return avatar;
@@ -25,15 +25,9 @@ public class UserInfo {
         this.avatar = avatar;
     }
     public String getUserId(){
-        return userId;
+        return userid;
     }
-    public void setUserId(String userId){
-        this.userId = userId;
-    }
-    public Integer getId(){
-        return id;
-    }
-    public void setId(Integer id){
-        this.id = id;
+    public void setUserId(String userid){
+        this.userid = userid;
     }
 }
